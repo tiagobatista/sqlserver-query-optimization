@@ -48,7 +48,7 @@ This guide will walk you through setting up a test database, seeding it with lar
    SELECT TOP 1000000
      ROW_NUMBER() OVER (ORDER BY (SELECT NULL)),
      CONCAT('Customer', ROW_NUMBER() OVER (ORDER BY (SELECT NULL))),
-     CONCAT('customer', ROW_NUMBER() OVER (ORDER BY (SELECT NULL)), '@example.com'),
+     CONCAT('customer', ROW_NUMBER() OVER (ORDER BY (SELECT NULL)), '@email.com'),
      CONCAT('Address', ROW_NUMBER() OVER (ORDER BY (SELECT NULL)))
    FROM sys.objects;
 
